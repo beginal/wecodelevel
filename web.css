@@ -1,137 +1,121 @@
+@media (min-width:500px) {
+  main {
+    display: flex;
+    flex-direction: column;
+  }
 
-main {
-  
-  display: flex;
-  flex-direction: column;
-}
+  .web_wrap {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  header {
+  }
+
+  section {
+    position:absolute;
+  }
 
 /*-----------------------------*/
 /*----------- NavBar ----------*/
 /*-----------------------------*/
 
 nav {
-  position: fixed;
-  top:0;
-  padding: .5rem 1rem;
-  display: flex;
-  justify-content: space-between;
-  background: white;
-  font-family: 'Do Hyeon', sans-serif;
-  width: 100%;
-  z-index: 9;
+  top:30%;
+  flex-direction: column;
+  background:none;
+  width: fit-content;
+  height: fit-content;
 }
 
-.nav_btn a:hover {
-  transition: color .3s;
-  color:red
+.nav_btn {
+  margin: 1rem;
+  padding-right:1rem;
+  font-size: 1.4rem;
 }
+
 .nav_right {
-  display: flex;
-  margin-right: 1rem;
+  flex-direction: column;
 }
-.nav_right div {
-  margin-right: 1rem;
-}
+
 /*-----------------------------*/
 /*---------- Header -----------*/
 /*-----------------------------*/
 
-header {
-  display: flex;
-  justify-content: center;
-}
-
-.my_image {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  margin: 0 10px;
-  width: 300px;
-  text-align: center;
-}
-
 .my_image img {
-  width: 300px;
+  width: 450px;
 }
 
 .name_title {
   position: absolute;
-  bottom: -5px;
-  text-align: center;
-  transform:rotate(-5deg);
-  padding: .5rem 1.3rem;
-  font-weight: 600;
 }
 
 .name_title:nth-of-type(1) {
-  background: #efb132;
-  color:#595956;
-  left:5.8rem;
+  left:6rem;
 }
 .name_title:nth-of-type(2) {
-  transform:rotate(-7deg);
-  background: #595956;
-  color:#efb132;
-  bottom: 30px;
-  left:1rem;
+  bottom: 40px;
+  left:-2rem;
 }
 .name_title span {
-  font-size: 2rem;
-  padding: 0 1rem;
+  font-size: 3rem;
 }
 
 .hashtag {
-  display: none;
+  display: block;
+  position:absolute;
+  top: 4rem;
+  left: -3rem;
+}
+.hashtag p {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 1.4rem;
+  font-weight: 700;
 }
 /*-----------------------------*/
 /*---------- Profile ----------*/
 /*-----------------------------*/
 
 .profile_wrap {
- display: flex;
- position:relative;
- flex-direction: column;
- background: rgba(0,0,0,.1);
- border-radius: 4px;
- font-family: 'Noto Serif KR', serif;
- padding: .5rem;
- margin: 1rem;
- color: #444444
-}
+  position: relative;
+  right: -17rem;
+  top: 6rem;
+  background: none;
+ }
 
-.profile_title { /* 프로필 타이틀 */
-  display: flex;
-  justify-content: center;
-  margin-bottom: 1.2rem;
-
-  font-family: 'Sunflower', sans-serif;
-}
-
-.profile_title div {
-  display: inline-block;
-  text-align: center;
-  font-size: 2rem;
-  font-weight: 700;
-  background: linear-gradient(transparent 35%, rgb(246,223,57) 66%);
-}
-
-.profile_text {
-  padding-left: 5px;
-}
-
-.svg img {
-  border-radius: 55%;
-  width: 48px;
-  height: 48px;
-  cursor:pointer;
-  margin-top: .5rem;
-  margin-right: .3rem;
-  transition:background 1s;
-  vertical-align: middle;
-}
-.svg img:hover {
-  background: #333333;
-}
+ .profile_title {
+  justify-content:left;
+ }
+ .profile_title div {
+   display: inline-block;
+   text-align: center;
+   font-size: 2rem;
+   font-weight: 700;
+   background: linear-gradient(transparent 35%, rgb(246,223,57) 66%);
+ }
+ 
+ .profile_text {
+   left:10px;
+   font-size:.9rem;
+   padding-left: 5px;
+ }
+ 
+ .svg img {
+   border-radius: 55%;
+   width: 48px;
+   height: 48px;
+   cursor:pointer;
+   margin-top: .5rem;
+   margin-right: .3rem;
+   transition:background 1s;
+   vertical-align: middle;
+ }
+ .svg img:hover {
+   background: #333333;
+ }
+ 
 
 /*-----------------------------*/
 /*----------- Skills ----------*/
@@ -139,6 +123,7 @@ header {
 
 .skill_title { /* 스킬탭 타이틀 */  
   display: flex;
+  margin-top: 2rem;
   justify-content: center;
   font-family: 'Sunflower', sans-serif;
   margin-bottom: .5rem;
@@ -221,23 +206,11 @@ header {
 .int:nth-of-type(3) {
   transform:rotate(-40deg);
 }
-
 /*-----------------------------*/
 /*---------- Footer -----------*/
 /*-----------------------------*/
-.footer_wrap {
-  border-top: 1px solid #e4e8eb;
-  background: #fcfbfc;
-  margin-top: 2rem;
-  padding: 2rem;
-}
-.footer_wrap p {
-  color:#777777;
-  text-align: center;
-  font-size: .8rem;
-  padding-bottom: 3px;
 
-}
 /*-----------------------------*/
 /*------------ 끝 -------------*/
 /*-----------------------------*/
+}
