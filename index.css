@@ -17,7 +17,6 @@ nav {
   justify-content: space-between;
   background: white;
   font-family: 'Do Hyeon', sans-serif;
-  width: 100%;
   z-index: 9;
 }
 
@@ -143,11 +142,18 @@ header {
 /*----------- Skills ----------*/
 /*-----------------------------*/
 
+aside {
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .skill_title { /* 스킬탭 타이틀 */  
   display: flex;
   justify-content: center;
   font-family: 'Sunflower', sans-serif;
-  margin-bottom: .5rem;
+  margin-bottom: 1rem;
   color: #444444
 }
 .skill_title div {
@@ -159,6 +165,8 @@ header {
 }
 
 .skill_wrap {
+  box-shadow: 5px 8px 10px gray; 
+  width:fit-content;
   text-align: center;
   font-family:'Do Hyeon';
 }
