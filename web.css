@@ -3,123 +3,200 @@
     background: #eeeeee;
   }
   main {
-    display: flex;
     margin: 0 auto;
     background: #ffffff;
     width: 1000px;
-    flex-direction: column;
-  }
-
-  .web_wrap {
-    margin-top: 2rem;
-    display: flex;
-    justify-content: center;
     flex-direction: row;
   }
 
-  header {
-  }
-
-  section {
-    position:absolute;
-  }
 
 /*-----------------------------*/
 /*----------- NavBar ----------*/
 /*-----------------------------*/
 
 nav {
+  /* ~ FOLLOW 부분까지 */
   flex-direction: column;
+  position:sticky;
   padding: 0;
   background:none;
-  width: 200px;
-  height: fit-content;
+  box-shadow: 2px 2px 2px;
+  width: 250px;
+  height:100%;
 }
-
+nav::after { 
+  /* 가장 하단부 삼각형 */
+  content:"";
+  position:absolute;
+  bottom:-10.8rem;
+  left:1.85rem;
+  width:143px;
+  height:143px;
+  box-shadow: inset 0 2px 0 0;
+  background: #ffffff;
+  z-index:-3;
+  transform:rotate(-45deg);
+}
 nav .home {
-  position: relative;
+  /* 상단부 주황색부분 */
   background: #efb132;
   box-sizing: border-box;
   width: 100%;
   height: 220px;
   margin-bottom:2rem;
-}
-.home .photo {
-  display:block;
-  margin-top: 1rem;
-  text-align: center;
-}
-.home .photo img {
-  width: 90%;
-  border-radius:50%;
+  z-index: -5;
 }
 
-.home .myname {
-  text-align: center;
-  margin-left:0px;
-  margin-right:0px;
-  padding-right:0px;
-}
 .home::after {
+  /* 상단부 삼각형 */
   position: absolute;
   content:"";
-  left:0;
-  top: 210px;
-  width: 100%;
-  height: 40px;
-  background:#efb132;
-  transform:skewY(-5deg);
-  z-index: -2;
+  left:1.83rem;
+  top: 150px;
+  width: 142px;
+  height: 142px;
+  background:#f3f3f3;
+  transform:rotate(-45deg);
+  z-index: -3;
 }
 
-.nav_sub {
+.tab_list_wrap {
+  /* 탭을 감싸는 부분 */
+  margin-right:0px;
   display: flex;
-  position: relative;
-  margin-right: 0;
-  padding-top:2rem;
-  padding-bottom:2rem;
-  height: -webkit-fill-available;
-  background: #f3f3f3;
-  z-index: -3;
   flex-direction: column;
+  align-items:flex-end;
 }
+.tab_list {
+  /* 각각의 탭 리스트 */
+  position:relative;
+  height:1em;
+  padding:.1rem;
+  background: green;
+  margin-bottom: 1rem;
+  margin-right:.7rem;
+  font-size:1.3rem;
+  border-radius: 0 4px 4px 0;
+}
+.tab_list a:hover {
+  /* 호버시 밀림 */
+  transition: padding .8s, color .6s;
+ color:#ccc;
+ padding-right:2rem;
+}
+.tab_list a {
+  margin: 0 .5rem
+}
+.tab_list::before {
+  /* 탭 왼쪽 삼각형 */
+  background:green;
+  content: "";
+  width:1.1rem;
+  height:1.1rem;
+  position:absolute;
+  left:-.5rem;
+  top:.2rem;
+  z-index:-1;
+  border-radius: 2px;
+  transform: rotate(45deg);
+}
+
 
 .nav_sub:before {
+  /* 회색 영역 추가 */
   position: absolute;
   content:"";
   left:0;
-  top:-15px;
+  top:-30px;
   width:100%;
   height:40px;
   background:#f3f3f3;
+  z-index:-2;
 }
-.nav_btn {
-  margin: 1rem;
+
+.nav_sub {
+  /* 회색 영역 */
+  display: flex;
+  position: relative;
+  padding-left: 1rem;
+  margin-right: 0;
+  background: #f3f3f3;
+  z-index: -3;
+  flex-direction: column;
+  margin-bottom:-3px;
+}
+
+.nav_sub:after {
+  /* 회색 영역 추가 */
+  position: absolute;
+  content:"";
+  left:0;
+  bottom:-6rem;
+  width:100%;
+  box-shadow: 2px 2px 2px;
+  height:100px;
+  background:#f3f3f3;
+}
+.nav_contact {
+  /* Contact 영역 */
   width:100%;
   padding-right:1rem;
+}
+.nav_title {
+  margin: 1rem;
   font-size: 1.4rem;
+  margin-bottom: 1rem;
 }
 
 .contact_list {
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom:.5rem;
+}
+
+.contact_list i {
   font-size: .8rem;
+  margin-right: .5rem;
 }
 
-.call_num {
-  display: none;
-  border:none;
+.contact_word {
+  font-size: .8rem;
+  margin-bottom: 0;
 }
 
-.call_input {
-  font-size: .9rem;
-  width:100px;
-  border:none;
-  background:none;
-  margin-bottom:.3rem;
-  font-family: 'Do Hyeon', sans-serif;
+.follow_tab {
+  height:100px;
+  margin-bottom: 3rem;
 }
+.follow_icon img {
+  border-radius: 55%;
+  width: 36px;
+  height: 36px;
+  cursor:pointer;
+  margin-top: .5rem;
+  margin-right: .3rem;
+  transition:width .3s,height .3s;
+  vertical-align: middle;
+}
+.follow_icon img:hover {
+  width: 50px;
+  height: 50px;
+}
+
 /*-----------------------------*/
 /*---------- Header -----------*/
 /*-----------------------------*/
+section {
+  position:absolute;
+  vertical-align: middle;
+}
+
+.web_wrap {
+  margin-left: 8rem;
+  display: flex;
+  flex-direction: row;
+}
 
 .my_image img {
   width: 450px;
@@ -143,26 +220,36 @@ nav .home {
 .hashtag {
   display: block;
   position:absolute;
+  text-align: left;
   top: 4rem;
-  left: -3rem;
+  left: -6rem;
+  cursor:help;
 }
 .hashtag p {
   font-family: 'Noto Serif KR', serif;
   font-size: 1.4rem;
   font-weight: 700;
+  transition: font-size .3s;
+}
+
+.hashtag p:hover {
+  font-size: 1.7rem;
 }
 /*-----------------------------*/
 /*---------- Profile ----------*/
 /*-----------------------------*/
 
+
+
 .profile_wrap {
   position: relative;
-  right: -17rem;
+  right: -14rem;
   top: 6rem;
   background: none;
  }
 
  .profile_title {
+   margin-left: 1rem;
   justify-content:left;
  }
  .profile_title div {
@@ -175,43 +262,37 @@ nav .home {
  
  .profile_text {
    left:10px;
+   text-align: left;
    font-size:.9rem;
    padding-left: 5px;
  }
- 
- .svg img {
-   border-radius: 55%;
-   width: 48px;
-   height: 48px;
-   cursor:pointer;
-   margin-top: .5rem;
-   margin-right: .3rem;
-   transition:background 1s;
-   vertical-align: middle;
- }
- .svg img:hover {
-   background: #333333;
- }
- 
+
 
 /*-----------------------------*/
 /*----------- Skills ----------*/
 /*-----------------------------*/
 
-.skill_title { /* 스킬탭 타이틀 */  
+aside {
   display: flex;
+}
+
+.skills {
+  display: flex;
+  width:400px;
+  flex-direction: column;
+  align-items: center;
+  overflow-x:visible;
+  margin-bottom: 2rem;
+}
+.skill_title { /* 스킬탭 타이틀 */  
+  display:block;
   margin-top: 2rem;
-  justify-content: center;
   font-family: 'Sunflower', sans-serif;
   margin-bottom: .5rem;
   color: #444444
 }
 .skill_title div {
   display: inline-block;
-  text-align: center;
-  font-size: 2rem;
-  font-weight: 700;
-  background: linear-gradient(transparent 35%, rgb(246,223,57) 66%);
 }
 
 .skill_wrap {
@@ -283,15 +364,123 @@ nav .home {
 .int:nth-of-type(3) {
   transform:rotate(-40deg);
 }
+
+/*---------------------------*/
+/*----------- Note ----------*/
+/*---------------------------*/
+
+.note_wrap {
+  display: block;
+  margin-top: 1.4rem;
+  margin-right: .6rem;
+  position: sticky;
+  width: 380px;
+  height: 430px;
+   z-index: 3;
+  background:#282c34;
+  box-shadow: 0px 2px 2px rgba(0,0,0,.4);
+}
+
+.note_title {
+  vertical-align:middle;
+  display:flex;
+  justify-content: flex-end;
+  /* padding-bottom: .3rem; */
+  border-radius: 3px;
+  box-shadow: 0px 2px 2px rgba(0,0,0,.4);
+  background:#21252b;
+  /* border-bottom: 1px solid gray; */
+  color:#99a1b0;
+}
+.note_title_name {
+  margin-left:3.6rem;
+  margin-top: .2rem;
+  flex:1;
+}
+.xi-checkbox-blank,
+.xi-close {
+  padding: .3rem .6rem;
+  cursor: pointer;
+}
+.xi-checkbox-blank:hover {
+  background:#383b41;
+}
+.xi-close:hover {
+  background:#f15959;
+  color:white
+}
+
+.note_inner {
+  margin: 2.5rem 1.5rem;
+  text-align:left;
+  color:#99a1b0;
+}
+.note_inner h3 {
+  font-size: .7rem;
+  text-align:right;
+  color:white;  
+  margin-left: .3rem;
+  margin-bottom: .4rem;
+}
+.note_inner p {
+  font-size: .83rem;
+  margin-bottom: 2px;
+  line-height: 1.3rem;
+}
+.xi-info-o,
+.xi-forum-o,
+.xi-check
+{
+  margin-right: .3rem;
+  padding-bottom: .15rem;
+}
+
+.pixedme,
+.clearme,
+.logme {
+  display: flex;
+  align-items: center;
+}
+.pixedme {
+  color:#f15959;  
+}
+.clearme {
+  color:#5ac985;
+}
+
+.rightpage {
+ position: relative;
+}
+
+.easterEgg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  margin-top: 1.2rem;
+  top:0;
+  width: 380px;
+  height: 430px;
+  background:white;
+}
+
+.easterEgg p {
+  font-size: 1.4rem;
+  font-family:'Do Hyeon';
+}
 /*-----------------------------*/
 /*---------- Footer -----------*/
 /*-----------------------------*/
 
 footer {
-  z-index : 99;
+  position:relative;
+  z-index : 10;
 }
 
 /*-----------------------------*/
 /*------------ 끝 -------------*/
 /*-----------------------------*/
 }
+
+

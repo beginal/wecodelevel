@@ -4,168 +4,304 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Noto+Serif+KR:wght@300&family=Sunflower:wght@300;500&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Noto+Serif+KR:wght@300&family=Sunflower:wght@300;500&Noto+Sans+KR:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
   <link rel="stylesheet" href="./reset.css">
   <link rel="stylesheet" href="./index.css">
   <link rel="stylesheet" href="./web.css">
+  <link rel="stylesheet" href="./minigame.css">
   <link rel="stylesheet" href="./lib.css">
   <title>Wecode - 1주차 자기소개 페이지</title>
 </head>
 
 <body>
+  <!-- FULL_Wrap Start -->
   <main>
+    <!-- NavBar Start -->
     <nav>
       <div class="home">
-        <div class="photo">
-           <img src="./public/image/profile.jpg"></img>
-        </div>       
-        <div class="nav_btn myname">
-          <a class="" href="#">Jun Ho</a>
-        </div>
+        <!-- <div class="photo">
+          <img src="./public/image/profile.jpg"></img>
+        </div> -->
+
       </div>
       <div class="nav_sub">
-        <div class="nav_btn">
-          <p>CONTACT</p>
-          <form>
-            <input class="call_input" placeholder="Hint : Birthday"></input>
-          <button type="submit" class="call_btn">Submit</button>
-          </form>          
-          <p class="contact_list call_num">
-            010-9215-****</p>
-          <p class="contact_list">경기도 하남시 망월동</p>
-          <p class="contact_list">beginal01@gmail.com</p>
+        <!-- Tab List Start -->
+
+        <div class="tab_list_wrap">
+          <div class="tab_list tab_active" data-tabnum="0">
+            <a href="#">INDEX</a>
+          </div>
+          <div class="tab_list" data-tabnum="1">
+            <a href="#">MINI GAME</a>
+          </div>
+          <div class="tab_list" data-tabnum="2">
+            <a href="#">EMPTY TAB</a>
+          </div>
         </div>
-        <div class="nav_btn">
-          <p>FOLLOW</p>
-            <span class="svg">
-              <a href="https://github.com/beginal" target="_blink">
-                <img src="./public/image/github.png" alt="github" />
-              </a>
-            </span>
+        <!-- Tab List End -->
+        <div class="nav_contact">
+          <!-- CONTACT Start -->
+          <p class="nav_title">CONTACT</p>
+          <!-- <form>
+            <input class="call_input" placeholder="Hint : Birthday"></input>
+            <button type="submit" class="call_btn">Submit</button>
+          </form>
+          <p class="contact_list call_num">
+            010-9215-****</p> -->
+
+          <div class="contact_list">
+            <i class="xi-gps"></i>
+            <p class="contact_word">경기도 하남시 망월동</p>
+          </div>
+          <div class="contact_list">
+            <i class="xi-call C008000"></i>
+            <p class="contact_word">010-9215-9984</p>
+          </div>
+          <div class="contact_list">
+            <i class="xi-gmail CE31606"></i>
+            <p class="contact_word">beginal01@gmail.com</p>
+          </div>
+          <div class="contact_list">
+            <i class="xi-github"></i>
+            <p class="contact_word">github.com/beginal</p>
+          </div>
+          <div class="contact_list">
+            <i class="xi-kakaotalk C3B1212"></i>
+            <p class="contact_word">beginal</p>
+          </div>
+          <div class="contact_list">
+            <i class="xi-instagram CF24D4D"></i>
+            <p class="contact_word">page0blue</p>
+          </div>
+        </div>
+        <!-- CONTACT End -->
+        <div class="nav_btn follow_tab">
+          <p class="nav_title">FOLLOW</p>
+          <span class="follow_icon">
+            <a href="https://github.com/beginal" target="_blink">
+              <img src="./public/image/github.png" alt="github" />
+            </a>
+          </span>
+          <span class="follow_icon">
+            <a href="https://www.instagram.com/page0blue/" target="_blink">
+              <img src="./public/image/insta.png" alt="github" />
+            </a>
+          </span>
         </div>
       </div>
     </nav>
-    <div class="web_wrap">   
-    <header>
-      
-      <div class="my_image"><img src="./public/image/myprofile.png" alt="" srcset="">
-        <div class="name_title">
-          <span>JUNHO</span>
-        </div>
-        <div class="name_title">
-          <span>Front-End</span>
-        </div>
-      </div>
-    </header>
+    <!-- Nav Bar End -->
+    <div class="tab_container">
+      <!-- Tab Container Start -->
+      <!-- Tab Content_1 Start -->
+      <div class="tab_content">
+        <div class="web_wrap">
+          <header>
 
-    <section id="profile" >
-      <div class="hashtag">
-      <p class="C1E90FF">#코드 개판으로 짬</p>
-      <p class="C6478FF">#놀러가고싶다</p>
-      <p class="C1E82CD">#근데 귀찮고</p>
-      <p class="C8878CD">#돈도 없는</p>
-      <p class="C00AFFF">#집돌이</p>
-      <p>#백수</p>
-      </div>
-      <div class="profile_wrap">
-          <div class="profile_title">
-            <div>
-              PROFILE
+            <div class="my_image"><img src="./public/image/myprofile.png" alt="" srcset="">
+              <div class="name_title">
+                <span>JUNHO</span>
+              </div>
+              <div class="name_title">
+                <span>Front-End</span>
+              </div>
             </div>
+          </header>
+          <!-- Profile Start -->
+          <section id="profile">
+            <div class="hashtag">
+              <p class="C1E90FF">#코드 개판으로 짬</p>
+              <p class="C6478FF">#놀러가고싶다</p>
+              <p class="C1E82CD">#근데 귀찮고</p>
+              <p class="C8878CD">#돈도 없는</p>
+              <p class="C00AFFF">#집돌이</p>
+              <p>#백수</p>
+            </div>
+            <div class="profile_wrap">
+              <div class="profile_title">
+                <div>
+                  PROFILE
+                </div>
+              </div>
+              <div class="profile_text">
+                <p class="fontrem_12">
+                  <span class="yellow_bold">안녕하세요 </span>Wecode 13기 <span class="yellow_bold">함준호</span>입니다.
+                </p>
+                <p>FUCKING CORONAVIRUS COVID-19</p>
+                <p>Wecode 13기 수강생</p>
+                <p>Cum iusto commodi harum optio atque</p>
+                <p>Dolor provident eum dolore possimus</p>
+                <p>fugit animi non sunt! Quam, animi!</p>
+              </div>
+            </div>
+          </section>
+          <!-- Profile End -->
         </div>
-        <div class="profile_text">
-          <p class="fontrem_12">
-            <span class="yellow_bold">안녕하세요 </span>Wecode 13기 <span class="yellow_bold">함준호</span>입니다.
-          </p>
-          <p>Lorem ipsum dolor sit amet consectetur elit. </p>
-          <p>Call : 010-0000-0000</p>
-          <p>Cum iusto commodi harum optio atque</p>
-          <p>Dolor provident eum dolore possimus</p>
-          <p>fugit animi non sunt! Quam, animi!</p>
-        </div>
+        <!-- Skills Start -->
+        <aside>
+          <div class="skills">
+            <div class="skill_title">
+              <div>
+                SKILL
+              </div>
+            </div>
+            <div class="skill_wrap">
+              <div class="pick_row">
+                <div class="skill pickskill tooltip_top" data-tooltip="HTML의 기본 구조를 파악하고 어쩌고 저쩌고">
+                  <img src="./public/image/html.jpg" alt="html">
+                  <div class="level">Lv.2</div>
+                </div>
+              </div>
+              <div class="pick_row">
+                <div class="int"></div>
+                <div class="int"></div>
+                <div class="int"></div>
+              </div>
 
+              <div class="pick_row">
+                <div class="skill pickskill tooltip_top" data-tooltip="CSS를 어쩌고 저쩌고">
+                  <img src="./public/image/css.png" alt="css">
+                  <div class="level">Lv.2</div>
+                  <p class="red_line" />
+                </div>
+                <div class="skill pickskill tooltip_top" data-tooltip="자바스크립트가 어쩌고 저쩌고">
+                  <img src="./public/image/js-logo.png" alt="javascript">
+                  <div class="level">Lv.3</div>
+                  <p class="red_line" />
+                </div>
+                <div class="skill pickskill tooltip_top" data-tooltip="기본적인 문법만 알고 있습니다.">
+                  <img src="./public/image/python.png" alt="python">
+                  <div class="level">Lv.1</div>
+                  <p class="red_line" />
+                </div>
+              </div>
+              <div class="pick_row pickskill">
+                <div class="skill pickskill tooltip_top" data-tooltip="SASS가 어쩌고 저쩌고">
+                  <img src="./public/image/Sass-logo.jpg" alt="sass">
+                  <div class="level">Lv.2</div>
+                  <p class="red_line" />
+                </div>
+                <div class="skill pickskill tooltip_top" data-tooltip="리액트가 너무 좋아">
+                  <img src="./public/image/react-logo.png" alt="react">
+                  <div class="level">Lv.3</div>
+                  <p class="red_line" />
+                </div>
+                <div class="skill pickskill tooltip_top" data-tooltip="오토핫키로 개인 매크로를 만들어 봄">
+                  <img src="./public/image/autohotkey.png" alt="autohotkey">
+                  <div class="level">Lv.2</div>
+                </div>
+              </div>
+              <div class="pick_row">
+                <div class="skill pickskill tooltip_top" data-tooltip="요즘은 스타일드&이모션이 대세">
+                  <img src="./public/image/styled.png" alt="styled">
+                  <div class="level">Lv.2</div>
+                </div>
+                <div class="skill pickskill tooltip_top" data-tooltip="노드 아직 잘 모름">
+                  <img src="./public/image/node.png" alt="node">
+                  <div class="level">Lv.1</div>
+
+                </div>
+                <div class="skill">
+                  <img src="./public/image/autohotkey.png" alt="autohotkey">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class ="rightpage">
+          <div class="note_wrap">
+            <div class="note_title">
+              <div class="note_title_name">ChangeLog</div>
+              <i class="xi-checkbox-blank"></i>
+              <i class="xi-close closeBtn"></i>
+            </div>
+            <div class="note_inner">
+              <h3>2020-08-17</h3>
+              <div class="clearme">
+                <i class="xi-check"></i>
+                <p>MINI GAME(카드 맞추기) 추가</p>
+              </div>
+              <div class="clearme">
+                <i class="xi-check"></i>
+                <p>INDEX 전면개선</p>
+              </div>
+              <div class="clearme">
+                <i class="xi-check"></i>
+                <p>NavBar 전면개선</p>
+              </div>
+              <div class="pixedme">
+                <i class="xi-info-o"></i>
+                <p>
+                  모바일페이지 개선 필요
+                </p>
+              </div>
+              <div class="pixedme">
+                <i class="xi-info-o"></i>
+                <p>
+                  nav 상단 사진넣기
+                </p>
+              </div>
+              <div class="logme">
+                <i class="xi-forum-o"></i>
+                <p>더이상 뭐 넣을지 아이디어가 안떠오름</p>
+              </div>
+              <h3>2020-08-18</h3>
+              <p>none</p>
+              <p>none</p>
+            </div>
+          </div>
+          <div class="easterEgg">
+            <p>
+              처음엔 대충하고 끝낼 생각이었는데.
+            </p>
+            <p>결국엔 불태워버렸다.</p>
+          </div>
+          </div>
       </div>
-    </section>
- </div>
-
-    <aside id="skill" >
-      <div class="skill_title">
+      </aside>
+      <!-- Skills End -->
+      <!-- Tab Content_1 End -->
+      <!-- Tab Content_2 Start -->
+      <div class="tab_content">
+        <div class="minigame_wrap">
+          <div>
+            <p class="minigame_title">카드 뒤집기</p>
+          </div>
+          <div class="minigame_box">
+          </div>
+          <div class="reset_btn">
+            초기화
+          </div>
+        </div>
+      </div>
+      <!-- Tab Content_2 End -->
+      <!-- Tab Content_3 Start -->
+      <div class="tab_content">
         <div>
-          SKILL
+          <div>3side</div>
         </div>
       </div>
-      <div class="skill_wrap">
-        <div class="pick_row">
-          <div class="skill pickskill tooltip_top" data-tooltip="HTML의 기본 구조를 파악하고 어쩌고 저쩌고">
-            <img src="./public/image/html.jpg" alt="html">
-            <div class="level">Lv.2</div>
-          </div>
-        </div>
-        <div class="pick_row">
-          <div class="int"></div>
-          <div class="int"></div>
-          <div class="int"></div>
-        </div>
+    </div>
+    <!-- Tab Content_3 End -->
+    </div>
+    <!-- Tab Container End -->
+    <!-- Footer Start -->
 
-        <div class="pick_row">
-          <div class="skill pickskill tooltip_top" data-tooltip="CSS를 어쩌고 저쩌고">
-            <img  src="./public/image/css.png" alt="css" >
-            <div class="level">Lv.2</div>
-            <p class="red_line" />
-          </div>
-          <div class="skill pickskill tooltip_top" data-tooltip="자바스크립트가 어쩌고 저쩌고">
-            <img src="./public/image/js-logo.png" alt="javascript">
-            <div class="level">Lv.3</div>
-            <p class="red_line" />
-          </div>
-          <div class="skill pickskill tooltip_top" data-tooltip="기본적인 문법만 알고 있습니다.">
-            <img src="./public/image/python.png" alt="python">
-            <div class="level">Lv.1</div>
-            <p class="red_line" />
-          </div>
-        </div>
-        <div class="pick_row pickskill">
-          <div class="skill pickskill tooltip_top" data-tooltip="SASS가 어쩌고 저쩌고">
-            <img src="./public/image/Sass-logo.jpg" alt="sass">
-            <div class="level">Lv.2</div>
-            <p class="red_line" />
-          </div>
-          <div class="skill pickskill tooltip_top" data-tooltip="리액트가 너무 좋아">
-            <img src="./public/image/react-logo.png" alt="react">
-            <div class="level">Lv.3</div>
-            <p class="red_line" />
-          </div>
-          <div class="skill pickskill tooltip_top" data-tooltip="오토핫키로 개인 매크로를 만들어 봄">
-            <img src="./public/image/autohotkey.png" alt="autohotkey">
-            <div class="level">Lv.2</div>
-          </div>
-        </div>
-        <div class="pick_row">
-          <div class="skill pickskill tooltip_top" data-tooltip="요즘은 스타일드&이모션이 대세">
-            <img src="./public/image/styled.png" alt="styled">
-            <div class="level">Lv.2</div>
-          </div>
-          <div class="skill pickskill tooltip_top" data-tooltip="노드 아직 잘 모름">
-            <img src="./public/image/node.png" alt="node">
-            <div class="level">Lv.1</div>
-            
-          </div>
-          <div class="skill">
-            <img src="./public/image/autohotkey.png" alt="autohotkey">
-          </div>
-        </div>
-      </div>
-    </aside>
-    <footer>
-      <div class="footer_wrap">
-        <p>HTML과 CSS만을 사용해서 만들었습니다.</p>
-        <p>이 페이지는 크롬에 최적화 되어 있습니다.</p>
-        <p>github: <a href="https://github.com/beginal" target="_blank">https://github.com/beginal</a> </p>
-      </div>
-    </footer>
+    <!-- Footer End -->
   </main>
+  <footer>
+    <div class="footer_wrap">
+      <p>HTML과 CSS만을 사용해서 만들었습니다.</p>
+      <p>이 페이지는 크롬에 최적화 되어 있습니다.</p>
+      <p>github: <a href="https://github.com/beginal" target="_blank">https://github.com/beginal</a> </p>
+    </div>
+  </footer>
+  <!-- FULL_Wrap End -->
 </body>
 
 <script src="./main.js"></script>
+<script src="./minigame.js"></script>
 
 </html>
