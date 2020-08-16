@@ -469,6 +469,15 @@ aside {
   font-size: 1.4rem;
   font-family:'Do Hyeon';
 }
+
+.portfolio_wrap {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
 /*-----------------------------*/
 /*---------- Footer -----------*/
 /*-----------------------------*/
