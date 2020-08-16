@@ -103,6 +103,20 @@ nav .home {
 .contact_list {
   font-size: .8rem;
 }
+
+.call_num {
+  display: none;
+  border:none;
+}
+
+.call_input {
+  font-size: .9rem;
+  width:100px;
+  border:none;
+  background:none;
+  margin-bottom:.3rem;
+  font-family: 'Do Hyeon', sans-serif;
+}
 /*-----------------------------*/
 /*---------- Header -----------*/
 /*-----------------------------*/
