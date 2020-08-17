@@ -2,6 +2,7 @@
 main {  
   display: flex;
   flex-direction: row;
+  background:#ffffff;
 }
 
 /*-----------------------------*/
@@ -132,7 +133,6 @@ header {
   text-align: center;
   font-size: 2rem;
   font-weight: 700;
-  background: linear-gradient(transparent 35%, rgb(246,223,57) 66%);
 }
 
 .profile_text {
@@ -182,7 +182,7 @@ header {
 }
 
 .skill_wrap {
-  box-shadow: 5px 8px 10px gray; 
+  /* box-shadow: 5px 8px 10px gray;  */
   width:fit-content;
   text-align: center;
   font-family:'Do Hyeon';
@@ -204,8 +204,8 @@ header {
 
 .skill img {
   margin-left: 5px;
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
   border-radius:50%;
   border: 1px solid rgba(3,3,3,0.3);
   vertical-align: middle;
@@ -214,11 +214,11 @@ header {
 }
 
 .pickskill img { /* 활성화 된 스킬 */
-  border: 1px solid rgba(255,48,3,0.3);
+  border: 1px solid white;
+  box-shadow: 0 0 5px rgba(0,0,0,.3);
   -webkit-filter: grayscale(0%);
   filter:none;
 }
-
 
 .level {
   position: absolute;
@@ -241,17 +241,17 @@ header {
 }
 /* 레드라인 삼지창 */
 .int {
-  margin: 5px 2.8rem;
+  margin: 0 2.4rem;
   background: red;
   width: 2px;
   height: 25px;
   vertical-align: middle;
 }
 .int:nth-of-type(1) {
-  transform:rotate(40deg);
+  transform:rotate(30deg);
 }
 .int:nth-of-type(3) {
-  transform:rotate(-40deg);
+  transform:rotate(-30deg);
 }
 
 .tooltip_top {

@@ -1,10 +1,9 @@
 @media (min-width:600px) {
-  body {
-    background: #eeeeee;
-  }
+body {
+  background:#ffffff;
+}
   main {
     margin: 0 auto;
-    background: #ffffff;
     width: 1000px;
     flex-direction: row;
   }
@@ -28,12 +27,12 @@ nav::after {
   /* 가장 하단부 삼각형 */
   content:"";
   position:absolute;
-  bottom:-10.8rem;
-  left:1.85rem;
+  bottom:-9rem;
+  left:1.84rem;
   width:143px;
   height:143px;
   box-shadow: inset 0 2px 0 0;
-  background: #ffffff;
+  background:#ffffff;
   z-index:-3;
   transform:rotate(-45deg);
 }
@@ -42,17 +41,16 @@ nav .home {
   background: #efb132;
   box-sizing: border-box;
   width: 100%;
-  height: 220px;
+  height: 160px;
   margin-bottom:2rem;
   z-index: -5;
 }
-
 .home::after {
   /* 상단부 삼각형 */
   position: absolute;
   content:"";
   left:1.83rem;
-  top: 150px;
+  top: 90px;
   width: 142px;
   height: 142px;
   background:#f3f3f3;
@@ -62,6 +60,7 @@ nav .home {
 
 .tab_list_wrap {
   /* 탭을 감싸는 부분 */
+  margin-top: .6rem;
   margin-right:0px;
   display: flex;
   flex-direction: column;
@@ -102,22 +101,12 @@ nav .home {
 }
 
 
-.nav_sub:before {
-  /* 회색 영역 추가 */
-  position: absolute;
-  content:"";
-  left:0;
-  top:-30px;
-  width:100%;
-  height:40px;
-  background:#f3f3f3;
-  z-index:-2;
-}
 
 .nav_sub {
   /* 회색 영역 */
   display: flex;
   position: relative;
+  top:-30px;
   padding-left: 1rem;
   margin-right: 0;
   background: #f3f3f3;
@@ -145,7 +134,6 @@ nav .home {
 .nav_title {
   margin: 1rem;
   font-size: 1.4rem;
-  margin-bottom: 1rem;
 }
 
 .contact_list {
@@ -174,7 +162,6 @@ nav .home {
   width: 36px;
   height: 36px;
   cursor:pointer;
-  margin-top: .5rem;
   margin-right: .3rem;
   transition:width .3s,height .3s;
   vertical-align: middle;
@@ -199,11 +186,14 @@ section {
 }
 
 .my_image img {
-  width: 450px;
+  width: 400px;
+  border-radius: 10%;
+  z-index:3;
 }
 
 .name_title {
   position: absolute;
+  z-index:3;
 }
 
 .name_title:nth-of-type(1) {
@@ -239,32 +229,41 @@ section {
 /*---------- Profile ----------*/
 /*-----------------------------*/
 
-
-
 .profile_wrap {
+  display:flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
+  width:400px;
+  height:300px;
+  top: .3rem;
   right: -14rem;
-  top: 6rem;
-  background: none;
- }
-
- .profile_title {
-   margin-left: 1rem;
-  justify-content:left;
- }
- .profile_title div {
-   display: inline-block;
-   text-align: center;
-   font-size: 2rem;
-   font-weight: 700;
-   background: linear-gradient(transparent 35%, rgb(246,223,57) 66%);
- }
- 
+  background: #ffffff;
+  border-radius: .9rem;
+  font-size:.8rem;
+}
+.profile_wrap::before {
+  display: flex;
+  flex-direction: column;
+  position:absolute;
+  color: #999;
+  font-weight: 600;
+  content: "1 2 3 4 5 6 7 8 9";
+  line-height: 20px;
+  top:3.92rem;
+  left:1.8rem;
+  width:2px;
+  height:300px;
+}
  .profile_text {
    left:10px;
    text-align: left;
-   font-size:.9rem;
+   font-family: 'Nanum Gothic Coding', monospace;
    padding-left: 5px;
+ }
+
+ .tab2 {
+   margin-left:1rem;
  }
 
 
@@ -314,23 +313,6 @@ aside {
   margin:5px 0;
 }
 
-.skill img {
-  margin-left: 5px;
-  width: 50px;
-  height: 50px;
-  border-radius:50%;
-  border: 1px solid rgba(3,3,3,0.3);
-  vertical-align: middle;
-  -webkit-filter: grayscale(100%);
-  filter:gray;
-}
-
-.pickskill img { /* 활성화 된 스킬 */
-  border: 1px solid rgba(255,48,3,0.3);
-  -webkit-filter: grayscale(0%);
-  filter:none;
-}
-
 .level {
   position: absolute;
   right:-4px;
@@ -341,30 +323,6 @@ aside {
   border: 1px solid gray;
   width:fit-content;
 }
-
-.red_line { /* 스킬 간격 빨간 줄 */
-  position:absolute;
-  left: 50%;
-  justify-content: center;
-  background: red;
-  width: 2px;
-  height: 25px;
-}
-/* 레드라인 삼지창 */
-.int {
-  margin: 5px 2.8rem;
-  background: red;
-  width: 2px;
-  height: 25px;
-  vertical-align: middle;
-}
-.int:nth-of-type(1) {
-  transform:rotate(40deg);
-}
-.int:nth-of-type(3) {
-  transform:rotate(-40deg);
-}
-
 /*---------------------------*/
 /*----------- Note ----------*/
 /*---------------------------*/
@@ -375,7 +333,7 @@ aside {
   margin-right: .6rem;
   position: sticky;
   width: 380px;
-  height: 430px;
+  height: 410px;
    z-index: 3;
   background:#282c34;
   box-shadow: 0px 2px 2px rgba(0,0,0,.4);
